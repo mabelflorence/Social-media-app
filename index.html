@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Social Media Platform</h1>
+    <nav>
+      <button id="loginPageBtn">Login</button>
+      <button id="registerPageBtn">Register</button>
+      <button id="postsPageBtn" >Posts</button>
+      <button id="logoutBtn" >Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="loginPage" class="hidden">
+      <h2 style="text-align: center;">Login</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginError" class="error hidden">Invalid credentials.</p>
+    </section>
+
+    <section id="registerPage" class="hidden">
+      <h2 style="text-align: center;">Register</h2>
+      <form id="registerForm">
+        <input type="text" id="registerName" placeholder="Name" required>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button type="submit">Register</button>
+      </form>
+      <p id="registerError" class="error hidden">Registration failed.</p>
+    </section>
+
+    <section id="postsPage" class="hidden">
+      <h2 style="text-align: center;">Posts</h2>
+      <form id="createPostForm">
+        <textarea id="postContent" placeholder="What's on your mind?" required></textarea>
+        <button type="submit">Post</button>
+      </form>
+      <div id="postsContainer"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
